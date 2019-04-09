@@ -1,0 +1,14 @@
+sentence(A) (X,Y):- np(X,X2), vp(X2,Y).
+np (X,Y):- det(X,X2), noun(X2,Y).
+vp (X,Y):- verb(X,Y).
+vp (X,Y):- verb(X,X2), np(X2,Y).
+det([a | X], X).
+det([an | X], X).
+det([the | X], X).
+noun([boy | X], X).
+noun([girl | X], X).
+noun([song | X], X).
+noun([apple | X], X).
+verb([sing | X], X).
+verb([sings | X], X).
+verb([eats | X], X).
